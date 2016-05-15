@@ -1,0 +1,9 @@
+<h1>all the films</h1>
+
+<%= link_to "Create a new film", new_movie_path, class:'btn btn-primary' %>
+
+<ul>
+  <% @movies.each do |movie| %>
+    <li><%= link_to movie.title, movie_path(movie) %></li>
+  <% end %>
+</ul>
